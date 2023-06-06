@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 
 
-def power(a, b):
+def pow(a, b):
     return a ** b
