@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 
-def magic_calculations(a, b, c):
+def magic_calculation(a, b, c):
     """match bytecode provided by alx"""
     if a < b:
         return (c)
