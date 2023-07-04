@@ -1,28 +1,24 @@
 #!/usr/bin/python3
 # 2-rectangle.py
-"""Defines a Rectangle class."""
+"""Defines a rctangle class"""
 
 
 class Rectangle:
-    """Represent a rectangle."""
+    """Represents a rectangle and various methods."""
 
     def __init__(self, width=0, height=0):
-        """Initialize a new Rectangle.
-
-        Args:
-            width (int): The width of the new rectangle.
-            height (int): The height of the new rectangle.
-        """
+        """Ïnitializes a rectangle"""
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """Get/set the width of the Rectangle."""
-        return self.__width
+        """Gets the width"""
+        return (self.__width)
 
     @width.setter
     def width(self, value):
+        """Sets the width value"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -31,11 +27,12 @@ class Rectangle:
 
     @property
     def height(self):
-        """Get/set the height of the Rectangle."""
-        return self.__height
+        """Gets the height value"""
+        return (self.__height)
 
     @height.setter
     def height(self, value):
+        """Sets the value of height"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
@@ -43,11 +40,13 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """Return the area of the Rectangle."""
-        return (self.__width * self.__height)
+        """Return the area of rectangle (L*W)"""
+
+        return (self.__height * self.__width)
 
     def perimeter(self):
-        """Return the perimeter of the Rectangle."""
-        if self.__width == 0 or self.__height == 0:
-            return (0)
-        return ((self.__width * 2) + (self.__height * 2))
+        """Returns perimeter of ractangle (2(L + w))"""
+        if self.__width < 0 or self.__height < 0:
+            return 0
+
+        return (2 * (self.__height + self.__width))
