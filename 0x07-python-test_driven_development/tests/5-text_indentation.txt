@@ -1,45 +1,77 @@
-``Text indentation``
+# 5-text_indentation.py
 
->>> text_indentation = __import__('5-text_indentation').text_indentation
+================================
+How to use 5-text_indentation.py
+================================
+
+This module defines a text indentation function ``text_indentation(text)`` that prints a text with 2 new lines after each of these characters: '.', '?' and ':'.
+
+Usage
+=====
+
+``text_indentation(...)`` returns an indented text based on the characters specified above.
+
+::
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+::
+
+    >>> text_indentation("Hello? How are you?")
+    Hello?
+    <BLANKLINE>
+    How are you?
+    <BLANKLINE>
+
+::
+
+    >>> text_indentation("Hello")
+    Hello
+
+::
+
+    >>> text_indentation("I have bought a car. It is a good car.")
+    I have bought a car.
+    <BLANKLINE>
+     It is a good car.
+    <BLANKLINE>
+
+::
+
+    >>> text_indentation("Things to learn: dict, list, tuple")
+    Things to learn:
+    <BLANKLINE>
+     dict, list, tuple
 
 
->>> text_indentation("Hello? How are you?")
-Hello?
-<BLANKLINE>
-How are you?
-<BLANKLINE>
-<BLANKLINE>
->>> text_indentation("Hello")
-Hello
+=======
+Errors
+=======
 
->>> text_indentation("I have bought a car. It is a good car.")
-I have bought a car.
-<BLANKLINE>
- It is a good car.
-<BLANKLINE>
+::
 
->>> text_indentation("Things to learn: dict, list, tuple")
-Things to learn:
-<BLANKLINE>
- dict, list, tuple
+    >>> text_indentation(100)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
 
->>> text_indentation(100)
-Traceback (most recent call last):
-...
-TypeError: text must be a string
+::
 
+    >>> text_indentation(9.8)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
 
->>> text_indentation(9.8)
-Traceback (most recent call last):
-...
-TypeError: text must be a string
+::
 
->>> text_indentation(Hello?)
-Traceback (most recent call last):
-...
-NameError: name 'Hello?' is not defined
+    >>> text_indentation(Hello?)
+    Traceback (most recent call last):
+    ...
+    NameError: name 'Hello?' is not defined
 
->>> text_indentation()
-Traceback (most recent call last):
-...
-TypeError: text_indentation() missing 1 required positional argument: 'text'
+::
+
+    >>> text_indentation()
+    Traceback (most recent call last):
+    ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
