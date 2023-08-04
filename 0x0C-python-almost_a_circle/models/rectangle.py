@@ -24,58 +24,58 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id)  # calls the superclass with init logic
 
-        @property
-        def width(self):
-            """getter for the attribute"""
-            return self.__width
+    @property
+    def width(self):
+        """getter for the attribute"""
+        return self.__width
 
-        @width.setter
-        def width(self, value):
-            """setter of the attribute"""
-            if not isinstance(int, value):
-                raise TypeError("Width must be an integer")
-            if value <= 0:
-                raise ValueError("width must be > 0")
-            self.__width = value
+    @width.setter
+    def width(self, value):
+        """setter of the attribute"""
+        if not isinstance(int, value):
+            raise TypeError("Width must be an integer")
+        if value <= 0:
+            raise ValueError("width must be > 0")
+        self.__width = value
 
-        @property
-        def height(self):
-            """getter of the height attribute"""
-            return self.__height
+    @property
+    def height(self):
+        """getter of the height attribute"""
+        return self.__height
 
-        @height.setter
-        def height(self, value):
-            """setter for the height attribute"""
-            if not isinstance(int, value):
-                raise TypeError("Height must be an integer")
-            if value <= 0:
-                raise ValueError("Height must be > 0")
-            self.__height = value
+    @height.setter
+    def height(self, value):
+        """setter for the height attribute"""
+        if not isinstance(int, value):
+            raise TypeError("Height must be an integer")
+        if value <= 0:
+            raise ValueError("Height must be > 0")
+        self.__height = value
 
-        @property
-        def x(self):
-            """getter of x attribute"""
-            return self.__x
+    @property
+    def x(self):
+        """getter of x attribute"""
+        return self.__x
 
-        @x.setter
-        def x(self, value):
-            """setter of the x attribute"""
-            if not isinstance(int, value):
-                raise TypeError("x must be an integer")
-            if value <= 0:
-                raise ValueError("x must be > 0")
-            self.__x = value
+    @x.setter
+    def x(self, value):
+        """setter of the x attribute"""
+        if not isinstance(int, value):
+            raise TypeError("x must be an integer")
+        if value <= 0:
+            raise ValueError("x must be > 0")
+        self.__x = value
 
-        @property
-        def y(self):
-            """getter for the y attribute"""
-            return self.__y
+    @property
+    def y(self):
+        """getter for the y attribute"""
+        return self.__y
 
-        @y.setter
-        def y(self, value):
-            """setter for the y attribute"""
-            if not isinstance(int, value):
-                raise TypeError("y must be an integer")
-            if y <= 0:
-                raise ValueError("y must be > 0")
-            self.__y = value
+    @y.setter
+    def y(self, value):
+        """setter for the y attribute"""
+        if not isinstance(int, value):
+            raise TypeError("y must be an integer")
+        if y <= 0:
+            raise ValueError("y must be > 0")
+        self.__y = value
