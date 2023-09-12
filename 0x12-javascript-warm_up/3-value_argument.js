@@ -1,3 +1,8 @@
 #!/usr/bin/node
 // print first argument passed to it.
-const args = proce
+
+if (process.argv.length <= 2) {
+  console.log('No argument');
+} else {
+  console.log(process.argv[2]);
+}
