@@ -1,6 +1,6 @@
 #!/usr/bin/node
 // print square
-const args = process.argv[2];
+const args = parseInt(process.argv[2]);
 
 if (isNaN(args)) {
   console.log('Missing size');
