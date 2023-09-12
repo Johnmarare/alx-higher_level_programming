@@ -2,7 +2,7 @@
 // print square
 const args = parseInt(process.argv[2]);
 
-if (typeof args !== 'number') {
+if (isNan(args)) {
   console.log('Missing size');
 } else {
   let i = 0;
@@ -10,7 +10,7 @@ if (typeof args !== 'number') {
     let j = 0;
     let row = '';
     while (j < args) {
-      row += 'x';
+      row += 'X';
       j++;
     }
     console.log(row);
