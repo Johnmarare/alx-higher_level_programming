@@ -1,11 +1,14 @@
 #!/usr/bin/python3
-# script that lists all states from the database hbtn_0e_0_usa
+""" script that lists all states from the database hbtn_0e_0_usa """
 
 import MySQLdb
 import sys
 
 
 def list_states(my_name, my_pass, my_data):
+    """function to list states
+    args
+    """
     try:
         # connect to mysql server
         db = MySQLdb.connect(host="localhost", port=3306, user=my_name,
