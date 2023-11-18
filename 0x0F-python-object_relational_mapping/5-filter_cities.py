@@ -13,7 +13,7 @@ if __name__ == "__main__":
                 states ON states.id=cities.state_id WHERE states.name = %s"""
     cur.execute(query, (state_name,))
     rows = cur.fetchall()
-    for row in rows:
-        print(row)
+    tmp = list(row[0] for row in rows)
+    print(*tmp, sep=", ")
     cur.close()
     db.close()
